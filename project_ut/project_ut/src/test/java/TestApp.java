@@ -39,18 +39,18 @@ public class TestApp {
     }
 
     @Test
-public void testPodziel() {
-    assertEquals(0, kalkulator.podziel(0, 1));
-    assertEquals(2, kalkulator.podziel(4, 2));
-    assertEquals(-2, kalkulator.podziel(4, -2));
-    assertEquals(-2, kalkulator.podziel(-4, 2));
-    assertEquals(2, kalkulator.podziel(-4, -2));
-    try {
-        kalkulator.podziel(4, 0);
-        Assert.fail("Expected IllegalArgumentException");
-    } catch (IllegalArgumentException e) {
-        assertEquals("Division by zero", e.getMessage());
-    }
+    public void testPodziel() {
+        assertEquals(0, kalkulator.podziel(0, 1));
+        assertEquals(2, kalkulator.podziel(4, 2));
+        assertEquals(-2, kalkulator.podziel(4, -2));
+        assertEquals(-2, kalkulator.podziel(-4, 2));
+        assertEquals(2, kalkulator.podziel(-4, -2));
+        try {
+            kalkulator.podziel(4, 0);
+            Assert.fail("Expected IllegalArgumentException");
+        } catch (IllegalArgumentException e) {
+            assertEquals("Division by zero", e.getMessage());
+        }
     }
 
     
